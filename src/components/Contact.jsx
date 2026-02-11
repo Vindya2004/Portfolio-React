@@ -18,12 +18,12 @@ const Contact = () => {
       icon: <Mail size={24} />,
       title: 'Email',
       info: 'hello@example.com',
-      link: 'mailto:hello@example.com'
+      link: 'mailto:vindyamadubhashini@gmail.com'
     },
     {
       icon: <Phone size={24} />,
       title: 'Phone',
-      info: '+1 (555) 123-4567',
+      info: '+94 76 992 1134',
       link: 'tel:+15551234567'
     },
     {

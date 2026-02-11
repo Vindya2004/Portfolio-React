@@ -156,7 +156,7 @@ const About = () => {
               <div>
                 <h4 className="font-semibold">Team Player</h4>
                 <p className="text-gray-400 text-sm">
-                  Experience collaborating on group projects with excellent communication skills
+                  Experience collaborating on group projects with communication skills
                 </p>
               </div>
             </div>

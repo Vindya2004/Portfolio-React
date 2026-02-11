@@ -14,7 +14,7 @@ const Projects = () => {
       image: '/shoes.webp', // Local image path
       icon: <ShoppingCart size={20} />,
       technologies: ['React', 'Node.js', 'MongoDB', 'Redux'],
-      github: 'https://github.com',
+      github: 'https://github.com/Vindya2004/The_Wind_Frontend',
       live: 'https://example.com',
       features: ['Real-time inventory', 'Payment processing', 'Admin dashboard', 'User reviews']
     },
@@ -26,7 +26,7 @@ const Projects = () => {
       image: '/Recipe.png', // Local image path
       icon: <Utensils size={20} />,
       technologies: ['React Native', 'Firebase', 'context'],
-      github: 'https://github.com',
+      github: 'https://github.com/Vindya2004/RecipeBox',
       live: 'https://example.com',
       features: ['Recipe search & discovery', 'Save and manage favorite recipes', 'User authentication', 'Recipe reviews & ratings', 'CRUD operations for user recipes']
     },
@@ -38,7 +38,7 @@ const Projects = () => {
       image: '/cake.png', // Local image path
       icon: <ShoppingBag size={20} />,
       technologies: ['Java', 'JavaFX'],
-      github: 'https://github.com',
+      github: 'https://github.com/Vindya2004/layeredProject',
       live: 'https://example.com',
       features: ['Product and category management', 'Sales and billing management', 'Order processing and invoice generation', 'Customer management']
     },
@@ -50,8 +50,8 @@ const Projects = () => {
       image: '/Ayurwedha.webp', // Local image path
       icon: <Heart size={20} />,
       technologies: ['Spring Boot','HTML', 'CSS', 'Java'],
-      github: 'https://github.com',
-      live: 'https://example.com',
+      github: 'https://github.com/Vindya2004/AWRMS',
+      live: 'https://www.youtube.com/watch?v=HmQDJn3IYHM&t=2s',
       features: ['Online retreat and treatment booking', 'Patient and visitor management', 'User authentication & role-based access', 'Admin dashboard for retreat management', 'Payment processing for bookings', 'REST API integration']
     },
     {
@@ -62,8 +62,8 @@ const Projects = () => {
       image: '/complaint-management-software.jpg', // Local image path
       icon: <AlertTriangle size={20} />,
       technologies: ['JavaEE', 'JSP', 'MYSQL'],
-      github: 'https://github.com',
-      live: 'https://example.com',
+      github: 'https://github.com/Vindya2004/CMS-JSP',
+      live: 'https://www.youtube.com/watch?v=IJznCcRHTKo',
       features: ['Online complaint submission', 'Complaint tracking and status updates', 'User authentication and role management', 'Admin dashboard for complaint handling']
     },
     {
@@ -74,7 +74,7 @@ const Projects = () => {
       image: '/tic-tak.avif', // Local image path
       icon: <Gamepad2 size={20} />,
       technologies: ['Java', 'Java OOP Concepts', 'JavaFX'],
-      github: 'https://github.com',
+      github: 'https://github.com/Vindya2004/Tik-Tac-Toe',
       live: 'https://example.com',
       features: ['Two-player gameplay', 'Object-oriented game logic', 'Win, draw, and game reset functionality', 'Interactive and user-friendly interface']
     },

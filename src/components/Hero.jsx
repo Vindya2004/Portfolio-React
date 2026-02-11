@@ -8,15 +8,44 @@ import {
   Download, 
   Code,
   Briefcase,
-  FolderOpen 
+  FolderOpen,
+  FileText,
+  CheckCircle
 } from 'lucide-react';
 
 const Hero = () => {
+  const [isDownloading, setIsDownloading] = React.useState(false);
+  const [downloadComplete, setDownloadComplete] = React.useState(false);
+
   const socialLinks = [
     { icon: <Github size={20} />, href: 'https://github.com', color: 'hover:text-gray-300' },
     { icon: <Linkedin size={20} />, href: 'https://linkedin.com', color: 'hover:text-blue-400' },
     { icon: <Twitter size={20} />, href: 'https://twitter.com', color: 'hover:text-sky-400' },
   ];
+
+  const handleDownloadCV = async (e) => {
+    e.preventDefault();
+    setIsDownloading(true);
+    
+    try {
+      const cvUrl = '/Vindya_Madubhashini_SE.pdf.pdf'; 
+      const link = document.createElement('a');
+      link.href = cvUrl;
+      link.download = 'Vindya-Madubhashini-CV.pdf'; 
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      
+      setDownloadComplete(true);
+      setTimeout(() => setDownloadComplete(false), 3000);
+      
+    } catch (error) {
+      console.error('Download failed:', error);
+      alert('CV download failed. Please try again.');
+    } finally {
+      setIsDownloading(false);
+    }
+  };
 
   return (
     <section id="home" className="min-h-screen flex items-center relative overflow-hidden">
@@ -72,8 +101,7 @@ const Hero = () => {
 
             <p className="text-gray-300 text-lg md:text-xl mb-8 max-w-2xl">
               I am an undergraduate passionate about UI/UX, frontend, and mobile development,
-               creating user-friendly and visually appealing digital experiences while continuously improving through hands-on projects.
-
+              creating user-friendly and visually appealing digital experiences while continuously improving through hands-on projects.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -86,14 +114,33 @@ const Hero = () => {
                 Get In Touch <ArrowRight size={20} />
               </motion.button>
               
-              <motion.a
+              {/* Download CV Button with States */}
+              <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="#"
-                className="btn-secondary flex items-center justify-center gap-2"
+                onClick={handleDownloadCV}
+                disabled={isDownloading}
+                className={`btn-secondary flex items-center justify-center gap-2 relative ${
+                  downloadComplete ? 'bg-green-500/20 border-green-500' : ''
+                }`}
               >
-                Download CV <Download size={20} />
-              </motion.a>
+                {isDownloading ? (
+                  <>
+                    <div className="w-5 h-5 border-2 border-primary border-t-transparent rounded-full animate-spin" />
+                    Downloading...
+                  </>
+                ) : downloadComplete ? (
+                  <>
+                    <CheckCircle size={20} className="text-green-500" />
+                    Downloaded!
+                  </>
+                ) : (
+                  <>
+                    <Download size={20} />
+                    Download CV
+                  </>
+                )}
+              </motion.button>
             </div>
 
             {/* Social Links */}
@@ -114,7 +161,7 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          {/* Right Content - Animated Profile WITH IMAGE */}
+          {/* Right Content - Profile Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -137,12 +184,12 @@ const Hero = () => {
                 }}
               />
               
-              {/* Profile Image Container WITH IMAGE */}
+              {/* Profile Image Container */}
               <div className="absolute inset-8 rounded-full overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900 border-4 border-gray-800">
                 <div className="w-full h-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
                   <img 
                     src="/my-image.jpeg" 
-                    alt="John Doe" 
+                    alt="Vindya Madubhashini" 
                     className="w-full h-full object-cover"
                   />
                 </div>
