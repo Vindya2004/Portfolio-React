@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-gray-900 to-gray-950 text-white;
+    overflow-x: hidden;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-900;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-blue-600;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-4 text-center;
+    background: linear-gradient(90deg, #3B82F6, #10B981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .section-subtitle {
+    @apply text-lg text-gray-300 mb-12 text-center max-w-3xl mx-auto;
+  }
+  
+  .card {
+    @apply bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-6 
+    hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary to-secondary text-white font-medium 
+    px-6 py-3 rounded-lg hover:scale-105 transition-all duration-300 
+    shadow-lg shadow-primary/20;
+  }
+  
+  .btn-secondary {
+    @apply border border-primary text-primary font-medium 
+    px-6 py-3 rounded-lg hover:bg-primary/10 transition-all duration-300;
+  }
+}
+
+/* Custom animations */
+.glow {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #3B82F6, #10B981);
+  opacity: 0.3;
+  z-index: -1;
+}
+
