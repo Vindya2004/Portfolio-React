@@ -21,7 +21,7 @@ const About = () => {
       >
         <h2 className="section-title">About Me</h2>
         <p className="section-subtitle">
-          Passionate IT Diploma student eager to apply theoretical knowledge in practical scenarios
+          Passionate Computer Science Diploma student eager to apply theoretical knowledge in practical scenarios
         </p>
       </motion.div>
 
@@ -40,7 +40,7 @@ const About = () => {
                 {/* Background Gradient */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20"></div>
                 
-                {/* Your Image */}
+               
                 <img 
                   src="/my-image.jpeg" 
                   alt="About Me" 

@@ -71,8 +71,9 @@ const Hero = () => {
             </h1>
 
             <p className="text-gray-300 text-lg md:text-xl mb-8 max-w-2xl">
-              I create exceptional digital experiences that blend innovation with functionality.
-              With expertise in modern web technologies, I bring ideas to life.
+              I am an undergraduate passionate about UI/UX, frontend, and mobile development,
+               creating user-friendly and visually appealing digital experiences while continuously improving through hands-on projects.
+
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">

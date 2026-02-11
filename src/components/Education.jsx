@@ -110,37 +110,6 @@ const Education = () => {
           </motion.div>
         ))}
       </div>
-
-      {/* Certifications Section - Uncomment if needed */}
-      {/* <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.3 }}
-      >
-        <h3 className="text-2xl font-bold text-center mb-8">Certifications & Courses</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {certifications.map((cert, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: index * 0.1 }}
-              className="card text-center p-6 hover:border-primary/50 transition-all duration-300"
-            >
-              <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Award size={24} className="text-primary" />
-              </div>
-              <h4 className="font-bold mb-2 text-sm">{cert.name}</h4>
-              <p className="text-gray-400 text-xs mb-2">{cert.issuer}</p>
-              <span className="text-primary text-xs font-semibold bg-primary/10 px-2 py-1 rounded-full">
-                {cert.year}
-              </span>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div> */}
     </section>
   );
 };
