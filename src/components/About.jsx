@@ -5,7 +5,7 @@ import { User, Target, Award, Clock, BookOpen, GraduationCap, Lightbulb, Users }
 const About = () => {
   const stats = [
     { icon: <BookOpen size={24} />, value: '10+', label: 'Projects Completed' },
-    { icon: <Award size={24} />, value: '4.0', label: 'Current GPA' },
+    { icon: <Award size={24} />, value: 'ongoing', label: 'Current GPA' },
     { icon: <Clock size={24} />, value: '1+', label: 'Years Learning' },
     { icon: <Users size={24} />, value: '5+', label: 'Team Projects' },
   ];
@@ -65,7 +65,7 @@ const About = () => {
               transition={{ delay: 0.3 }}
               className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-2xl flex flex-col items-center justify-center text-white shadow-2xl"
             >
-              <div className="text-3xl font-bold">4.0</div>
+              <div className="text-1xl font-bold">ongoing</div>
               <div className="text-sm">GPA</div>
             </motion.div>
           </div>

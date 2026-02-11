@@ -90,7 +90,7 @@ const Hero = () => {
               className="inline-flex items-center px-4 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700 mb-6"
             >
               <div className="w-2 h-2 bg-secondary rounded-full mr-2 animate-pulse"></div>
-              <span className="text-sm">Available for freelance work</span>
+              <span className="text-sm">Open for Collaboration</span>
             </motion.div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
